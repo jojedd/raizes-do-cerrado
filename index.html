@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raizes do Cerrado DF</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     POP-UP
+========================================================= -->
+
+<div
+  class="popup-doacao"
+  id="popupDoacao">
+
+  <div class="popup-titulo">
+
+    <span>
+      Raizes do Cerrado
+    </span>
+
+    <div class="popup-botoes-janela">
+
+      <button
+        class="popup-min"
+        tabindex="-1"
+        aria-label="Minimizar">
+        _
+      </button>
+
+      <button
+        class="popup-max"
+        tabindex="-1"
+        aria-label="Maximizar">
+        □
+      </button>
+
+      <button
+        class="popup-fechar"
+        onclick="fecharPopup()"
+        aria-label="Fechar">
+        ×
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="popup-conteudo">
+
+    <img
+      src="gatito.gif"
+      class="popup-imagem"
+      alt="Ajude o Cerrado">
+
+    <h3>
+      💚 Ajude o Cerrado!
+    </h3>
+
+    <p>
+      Sua contribuição ajuda nosso projeto
+      a recuperar áreas do Cerrado e plantar
+      novas mudas.
+    </p>
+
+    <button
+      class="popup-botao"
+      onclick="irParaDoacao()">
+      🌱 Quero ajudar
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     BOLHAS
+========================================================= -->
+
+<div class="bubbles">
+
+  <span class="bubble b1"></span>
+  <span class="bubble b2"></span>
+
+  <!-- b3 REMOVIDA POR SER A MENOR BOLHA -->
+
+  <span class="bubble b4"></span>
+  <span class="bubble b5"></span>
+  <span class="bubble b6"></span>
+  <span class="bubble b7"></span>
+  <span class="bubble b8"></span>
+  <span class="bubble b9"></span>
+  <span class="bubble b10"></span>
+  <span class="bubble b11"></span>
+  <span class="bubble b12"></span>
+  <span class="bubble b13"></span>
+  <span class="bubble b14"></span>
+  <span class="bubble b15"></span>
+
+  <!-- NOVA BOLHA -->
+  <span class="bubble b16"></span>
+
+</div>
+
+
+
+<!-- =========================================================
+     ESPIRAIS DE VIDRO
+========================================================= -->
+
+<div class="glass-spirals">
+
+  <!-- ESPIRAL GRANDE -->
+  <div class="glass-spiral spiral-large">
+
+    <div class="spiral-core"></div>
+
+    <div class="inner-spiral inner-one"></div>
+
+    <div class="inner-spiral inner-two"></div>
+
+  </div>
+
+
+
+  <!-- ESPIRAL MÉDIA -->
+  <div class="glass-spiral spiral-medium">
+
+    <div class="spiral-core"></div>
+
+    <div class="inner-spiral inner-one"></div>
+
+    <div class="inner-spiral inner-two"></div>
+
+  </div>
+
+
+
+  <!-- ESPIRAL PEQUENA -->
+  <div class="glass-spiral spiral-small">
+
+    <div class="spiral-core"></div>
+
+    <div class="inner-spiral inner-one"></div>
+
+    <div class="inner-spiral inner-two"></div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+  <div class="banner-track">
+
+    <div class="banner banner-1"></div>
+
+    <div class="banner banner-2"></div>
+
+    <div class="banner banner-3"></div>
+
+  </div>
+
+
+  <div class="header-glass">
+
+    <span class="badge">
+      Projeto Escolar • Ensino Médio
+    </span>
+
+    <h1>
+      Raizes do Cerrado DF
+    </h1>
+
+    <p>
+      Restaurando a Biodiversidade da Nossa Capital!!!!
+    </p>
+
+  </div>
+
+
+  <div class="banner-dots">
+
+    <span class="banner-dot"></span>
+
+    <span class="banner-dot"></span>
+
+    <span class="banner-dot"></span>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     PAINEL DE NOTÍCIAS
+========================================================= -->
+
+<section class="news-panel" id="newsPanel">
+
+  <div class="news-header">
+
+    <div class="news-title">
+
+      <span class="news-icon">
+        📰
+      </span>
+
+      <strong>
+        Notícias do Cerrado
+      </strong>
+
+      <span class="news-count">
+        5 notícias
+      </span>
+
+    </div>
+
+
+    <button
+      type="button"
+      class="news-toggle"
+      onclick="toggleNews()"
+      aria-label="Recolher notícias">
+
+      −
+
+    </button>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       ABAS
+       (preenchidas dinamicamente por carregarNoticias())
+  ======================================================== -->
+
+  <div class="news-tabs" id="newsTabs">
+
+    <button
+      class="news-tab active"
+      disabled>
+      Carregando…
+    </button>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       NOTÍCIAS
+       (preenchidas dinamicamente por carregarNoticias())
+  ======================================================== -->
+
+  <div class="news-content" id="newsContent">
+
+    <p class="news-vazio">
+      Carregando notícias...
+    </p>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       ARQUIVO DE NOTÍCIAS ANTIGAS
+       (preenchido dinamicamente por carregarNoticias())
+  ======================================================== -->
+
+  <div
+    class="news-archive"
+    id="newsArchive"></div>
+
+</section>
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     PANORAMA
+========================================================= -->
+
+<section class="glass-card">
+
+  <h2>
+    📊 Panorama do Cerrado no Distrito Federal
+  </h2>
+
+  <p>
+    O Cerrado é um dos biomas mais importantes do Brasil e possui
+    papel fundamental na proteção das nascentes e dos recursos
+    hídricos do Distrito Federal.
+  </p>
+
+  <p>
+    O crescimento urbano, a fragmentação dos habitats e a degradação
+    ambiental tornam necessárias ações de recuperação e educação
+    ambiental.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat">
+
+      <strong>
+        50%+
+      </strong>
+
+      <span>
+        Vegetação original ameaçada ou perdida
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        10.000+
+      </strong>
+
+      <span>
+        Espécies de plantas do Cerrado
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        3
+      </strong>
+
+      <span>
+        Grandes bacias hidrográficas
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        DF
+      </strong>
+
+      <span>
+        Área estratégica para os recursos hídricos
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INICIATIVA
+========================================================= -->
+
+<section class="glass-card">
+
+  <h2>
+    💡 Sobre a Nossa Iniciativa
+  </h2>
+
+  <p>
+    O Raizes Cerrado DF é um projeto escolar que une pesquisa,
+    educação ambiental e ações práticas para incentivar a
+    recuperação de áreas degradadas.
+  </p>
+
+  <div class="pillars">
+
+    <div class="pillar">
+
+      <h3>
+        🌱 Plantio
+      </h3>
+
+      <p>
+        Plantio de espécies nativas em áreas selecionadas
+        e acompanhamento do desenvolvimento das mudas.
+      </p>
+
+    </div>
+
+
+    <div class="pillar">
+
+      <h3>
+        💧 Água
+      </h3>
+
+      <p>
+        Ações educativas voltadas à proteção das nascentes,
+        córregos e áreas de preservação.
+      </p>
+
+    </div>
+
+
+    <div class="pillar">
+
+      <h3>
+        📚 Educação
+      </h3>
+
+      <p>
+        Oficinas e atividades para aproximar os estudantes
+        da biodiversidade do Cerrado.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ESPÉCIES
+========================================================= -->
+
+<section class="glass-card">
+
+  <h2>
+    🌿 Espécies do Cerrado no Distrito Federal
+  </h2>
+
+  <p>
+    Conheça algumas plantas, flores, arbustos e árvores
+    encontradas no Cerrado do Distrito Federal.
+  </p>
+
+
+  <div class="carousel especies-carousel">
+
+    <div class="carousel-viewport">
+
+      <div
+        class="track"
+        id="especiesTrack">
+
+
+        <!-- 01 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/caliandra.jpg"
+              alt="Caliandra">
+
+          </div>
+
+          <h3>
+            Caliandra
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Calliandra_dysantha"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Calliandra dysantha
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Arbusto florido
+          </span>
+
+          <p>
+            Arbusto conhecido pelas flores delicadas,
+            geralmente vermelhas ou rosadas.
+          </p>
+
+        </div>
+
+
+
+        <!-- 02 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/pequi.jpg"
+              alt="Pequi">
+
+          </div>
+
+          <h3>
+            Pequi
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Caryocar_brasiliense"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Caryocar brasiliense
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore frutífera
+          </span>
+
+          <p>
+            Espécie típica do Cerrado que produz o
+            conhecido fruto pequi.
+          </p>
+
+        </div>
+
+
+
+        <!-- 03 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/azulzinho-do-cerrado.jpg"
+              alt="Azulzinho-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Azulzinho-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Commelina"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Commelina sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Flor nativa
+          </span>
+
+          <p>
+            Pequena planta conhecida por suas delicadas
+            flores azuladas.
+          </p>
+
+        </div>
+
+
+
+        <!-- 04 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/baru.jpg"
+              alt="Baru">
+
+          </div>
+
+          <h3>
+            Baru
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Dipteryx_alata"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Dipteryx alata
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore frutífera
+          </span>
+
+          <p>
+            Árvore nativa que produz sementes conhecidas
+            como castanhas de baru.
+          </p>
+
+        </div>
+
+
+
+        <!-- 05 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/canela-de-ema.jpg"
+              alt="Canela-de-Ema">
+
+          </div>
+
+          <h3>
+            Canela-de-Ema
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Vellozia_flavicans"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Vellozia flavicans
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Planta nativa
+          </span>
+
+          <p>
+            Planta característica de áreas abertas e
+            ambientes de Cerrado rupestre.
+          </p>
+
+        </div>
+
+
+
+        <!-- 06 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/cagaita.jpg"
+              alt="Cagaita">
+
+          </div>
+
+          <h3>
+            Cagaita
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Eugenia_dysenterica"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Eugenia dysenterica
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore frutífera
+          </span>
+
+          <p>
+            Espécie nativa do Cerrado que produz
+            pequenos frutos amarelos.
+          </p>
+
+        </div>
+
+
+
+        <!-- 07 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/chuveirinho.jpg"
+              alt="Chuveirinho">
+
+          </div>
+
+          <h3>
+            Chuveirinho
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Paepalanthus"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Paepalanthus sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Planta herbácea
+          </span>
+
+          <p>
+            Planta de pequeno porte encontrada em áreas
+            campestres do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 08 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/ipe-amarelo.jpg"
+              alt="Ipê-Amarelo">
+
+          </div>
+
+          <h3>
+            Ipê-Amarelo
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Handroanthus_ochraceus"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Handroanthus ochraceus
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore florida
+          </span>
+
+          <p>
+            Árvore característica do Cerrado, conhecida
+            por sua intensa floração amarela.
+          </p>
+
+        </div>
+
+
+
+        <!-- 09 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/arnica.jpg"
+              alt="Arnica-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Arnica-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Lychnophora_ericoides"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Lychnophora ericoides
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Planta herbácea
+          </span>
+
+          <p>
+            Planta de pequeno porte encontrada em áreas
+            naturais do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 10 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/buriti.jpg"
+              alt="Buriti">
+
+          </div>
+
+          <h3>
+            Buriti
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Mauritia_flexuosa"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Mauritia flexuosa
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Palmeira
+          </span>
+
+          <p>
+            Palmeira característica das veredas e de
+            ambientes associados à água.
+          </p>
+
+        </div>
+
+
+
+        <!-- 11 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/margaridinha.jpg"
+              alt="Margaridinha-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Margaridinha-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Asteraceae"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Asteraceae sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Flor
+          </span>
+
+          <p>
+            Pequena flor nativa encontrada em campos
+            e áreas abertas do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 12 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/copaiba.jpg"
+              alt="Copaíba">
+
+          </div>
+
+          <h3>
+            Copaíba
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Copaifera_langsdorffii"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Copaifera langsdorffii
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore
+          </span>
+
+          <p>
+            Árvore nativa encontrada em diferentes
+            formações vegetais do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 13 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/sempre-viva.jpg"
+              alt="Sempre-viva">
+
+          </div>
+
+          <h3>
+            Sempre-viva
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Comanthera"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Comanthera sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Flor
+          </span>
+
+          <p>
+            Pequena planta conhecida por suas flores
+            resistentes e características.
+          </p>
+
+        </div>
+
+
+
+        <!-- 14 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/jatoba.jpg"
+              alt="Jatobá-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Jatobá-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Hymenaea_stigonocarpa"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Hymenaea stigonocarpa
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore
+          </span>
+
+          <p>
+            Espécie nativa característica de áreas
+            de Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 15 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/mal-me-quer.jpg"
+              alt="Mal-me-quer-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Mal-me-quer-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Aspilia"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Aspilia sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Flor
+          </span>
+
+          <p>
+            Pequena planta de flores vistosas encontrada
+            em ambientes naturais do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 16 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/araticum.jpg"
+              alt="Araticum">
+
+          </div>
+
+          <h3>
+            Araticum
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Annona_crassiflora"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Annona crassiflora
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore frutífera
+          </span>
+
+          <p>
+            Espécie nativa que produz frutos grandes
+            e bastante característicos.
+          </p>
+
+        </div>
+
+
+
+        <!-- 17 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/aroeira.jpg"
+              alt="Aroeira">
+
+          </div>
+
+          <h3>
+            Aroeira
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Myracrodruon_urundeuva"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Myracrodruon urundeuva
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore
+          </span>
+
+          <p>
+            Espécie arbórea nativa presente em diferentes
+            ambientes do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 18 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/cajuzinho-do-cerrado.jpg"
+              alt="Cajuzinho-do-Cerrado">
+
+          </div>
+
+          <h3>
+            Cajuzinho-do-Cerrado
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Anacardium_humile"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Anacardium humile
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Planta frutífera
+          </span>
+
+          <p>
+            Planta nativa que produz pequenos frutos
+            semelhantes ao caju.
+          </p>
+
+        </div>
+
+
+
+        <!-- 19 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/sucupira.jpg"
+              alt="Sucupira">
+
+          </div>
+
+          <h3>
+            Sucupira
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Pterodon"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Pterodon sp.
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Árvore
+          </span>
+
+          <p>
+            Árvore nativa bastante associada à
+            vegetação do Cerrado.
+          </p>
+
+        </div>
+
+
+
+        <!-- 20 -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="especies/mangaba.jpg"
+              alt="Mangaba">
+
+          </div>
+
+          <h3>
+            Mangaba
+          </h3>
+
+          <a
+            class="scientific-name"
+            href="https://pt.wikipedia.org/wiki/Hancornia_speciosa"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <em>
+              Hancornia speciosa
+            </em>
+
+          </a>
+
+          <span class="tag">
+            Planta frutífera
+          </span>
+
+          <p>
+            Planta nativa do Cerrado conhecida por
+            seus frutos aromáticos.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <button
+      type="button"
+      class="carousel-button previous"
+      onclick="changeSlide('especies', -1)"
+      aria-label="Espécie anterior">
+
+      ‹
+
+    </button>
+
+
+
+    <button
+      type="button"
+      class="carousel-button next"
+      onclick="changeSlide('especies', 1)"
+      aria-label="Próxima espécie">
+
+      ›
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EQUIPE
+========================================================= -->
+
+<section class="glass-card">
+
+  <h2>
+    👥 Equipe do Projeto
+  </h2>
+
+  <p>
+    Conheça os integrantes responsáveis pelas diferentes
+    áreas da iniciativa.
+  </p>
+
+  <div class="carousel">
+
+    <div class="carousel-viewport">
+
+      <div
+        class="track"
+        id="teamTrack">
+
+
+        <!-- JOÃO -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="majed.jpg"
+              alt="Joao Majed">
+
+          </div>
+
+          <h3>
+            João Majed
+          </h3>
+
+          <span class="tag">
+            ...........
+          </span>
+
+          <p>
+            ...........
+          </p>
+
+        </div>
+
+
+
+        <!-- ANA -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="ana.jpg"
+              alt="Ana Carollina">
+
+          </div>
+
+          <h3>
+            ..............
+          </h3>
+
+          <span class="tag">
+            ...........
+          </span>
+
+          <p>
+            ..............
+          </p>
+
+        </div>
+
+
+
+        <!-- MARCELLY -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="celly.jpg"
+              alt="Marcelly Hadassa">
+
+          </div>
+
+          <h3>
+            Marcelly Hadassa
+          </h3>
+
+          <span class="tag">
+            Comunicação
+          </span>
+
+          <p>
+            ..........
+          </p>
+
+        </div>
+
+
+
+        <!-- MARIA LUIZA -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="malu.jpg"
+              alt="Maria Luiza">
+
+          </div>
+
+          <h3>
+            Maria Luiza
+          </h3>
+
+          <span class="tag">
+            ....
+          </span>
+
+          <p>
+            .....
+          </p>
+
+        </div>
+
+
+
+        <!-- ERICK -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="erick.jpg"
+              alt="Erick">
+
+          </div>
+
+          <h3>
+            Erick
+          </h3>
+
+          <span class="tag">
+            ....
+          </span>
+
+          <p>
+            ...............
+          </p>
+
+        </div>
+
+
+
+        <!-- CALEBE -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="calebe.jpg"
+              alt="Calebe">
+
+          </div>
+
+          <h3>
+            Calebe
+          </h3>
+
+          <span class="tag">
+            ........
+          </span>
+
+          <p>
+            ...........
+          </p>
+
+        </div>
+
+
+
+        <!-- ROSANA -->
+
+        <div class="slide">
+
+          <div class="slide-icon">
+
+            <img
+              src="rosana.jpg"
+              alt="Rosana Vieira">
+
+          </div>
+
+          <h3>
+            Prof. Rosana Vieira
+          </h3>
+
+          <span class="tag">
+            Orientadora
+          </span>
+
+          <p>
+            Orientação científica e acompanhamento das
+            atividades ambientais.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <button
+      type="button"
+      class="carousel-button previous"
+      onclick="changeSlide('team', -1)"
+      aria-label="Anterior">
+
+      ‹
+
+    </button>
+
+
+
+    <button
+      type="button"
+      class="carousel-button next"
+      onclick="changeSlide('team', 1)"
+      aria-label="Próximo">
+
+      ›
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONQUISTAS
+========================================================= -->
+
+<section class="glass-card">
+
+  <h2>
+    🏆 Conquistas &amp; Marcos
+  </h2>
+
+  <p>
+    Acompanhe os principais resultados e momentos do projeto.
+  </p>
+
+  <div class="carousel">
+
+    <div class="carousel-viewport">
+
+      <div
+        class="track"
+        id="achievementTrack">
+
+
+        <div class="slide">
+
+          <div class="slide-icon">
+            🌱
+          </div>
+
+          <h3>
+            Placeholder
+          </h3>
+
+          <span class="tag">
+            Ação Realizada
+          </span>
+
+          <p>
+           ..................
+          </p>
+
+        </div>
+
+
+
+        <div class="slide">
+
+          <div class="slide-icon">
+            🥇
+          </div>
+
+          <h3>
+             Placeholder
+          </h3>
+
+          <span class="tag">
+            Premiação
+          </span>
+
+          <p>
+           ....................
+          </p>
+
+        </div>
+
+
+
+        <div class="slide">
+
+          <div class="slide-icon">
+            💧
+          </div>
+
+          <h3>
+             Placeholder
+          </h3>
+
+          <span class="tag">
+            Ação Ambiental
+          </span>
+
+          <p>
+            ................................
+          </p>
+
+        </div>
+
+
+
+        <div class="slide">
+
+          <div class="slide-icon">
+            📖
+          </div>
+
+          <h3>
+             Placeholder
+          </h3>
+
+          <span class="tag">
+            Educação
+          </span>
+
+          <p>
+            ....................
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <button
+      type="button"
+      class="carousel-button previous"
+      onclick="changeSlide('achievement', -1)"
+      aria-label="Anterior">
+
+      ‹
+
+    </button>
+
+
+
+    <button
+      type="button"
+      class="carousel-button next"
+      onclick="changeSlide('achievement', 1)"
+      aria-label="Próximo">
+
+      ›
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DOAÇÃO
+========================================================= -->
+
+<section class="glass-card donation">
+
+  <h2>
+    🤝 Faça Parte Dessa Mudança!
+  </h2>
+
+  <p>
+    Sua contribuição pode ajudar na compra de sementes,
+    substratos, materiais para plantio e equipamentos
+    utilizados nas ações ambientais.
+  </p>
+
+  <button
+    type="button"
+    class="donate-button"
+    onclick="showPix()">
+
+    💚 Apoiar com Doação
+
+  </button>
+
+  <div
+    class="pix"
+    id="pix">
+
+    <strong>
+      Chave PIX do Projeto
+    </strong>
+
+    <span class="pix-code">
+      doar@revitalizacerrado.df.br
+    </span>
+
+  </div>
+
+<button
+    type="button"
+    class="instagram-button"
+    onclick="window.open('https://www.instagram.com/raizesdocerrado.cemigama/', '_blank')">
+
+    📸 Seguir no Instagram
+
+</button>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <p>
+    Projeto Escolar CEMI Gama • Distrito Federal — Brasil
+  </p>
+
+  <p
+    style="
+      font-size:0.8rem;
+      margin-top:6px;
+    ">
+
+    Projeto de revitalização do cerrado do DF
+
+  </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

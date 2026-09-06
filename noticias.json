@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "🌱 Meio ambiente",
+    "titulo": "Novo projeto recupera área de Cerrado no DF",
+    "resumo": "Ações de recuperação ambiental ajudam a restaurar a vegetação nativa.",
+    "link": "https://exemplo.com/noticia-1",
+    "data": "2026-09-01"
+  },
+  {
+    "tag": "💧 Conservação",
+    "titulo": "Brasília amplia ações de preservação",
+    "resumo": "Projetos ambientais ajudam na proteção de nascentes e cursos d'água.",
+    "link": "https://exemplo.com/noticia-2",
+    "data": "2026-08-20"
+  }
+]

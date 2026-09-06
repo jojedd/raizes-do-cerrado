@@ -1,0 +1,75 @@
+/* =========================================
+   PADRÃO FRUTIGER AERO — ARQUOS NA TELA
+========================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Camada decorativa */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+
+    pointer-events: none;
+    z-index: 0;
+
+    opacity: 0.55;
+
+    background:
+        /* arco superior esquerdo */
+        radial-gradient(
+            ellipse 500px 350px at 5% 15%,
+            transparent 60%,
+            rgba(255,255,255,0.18) 60.5%,
+            transparent 61%
+        ),
+
+        /* arco superior direito */
+        radial-gradient(
+            ellipse 650px 450px at 95% 10%,
+            transparent 63%,
+            rgba(255,240,180,0.15) 63.5%,
+            transparent 64%
+        ),
+
+        /* arco central */
+        radial-gradient(
+            ellipse 800px 500px at 50% 55%,
+            transparent 68%,
+            rgba(255,255,255,0.12) 68.5%,
+            transparent 69%
+        ),
+
+        /* arco inferior esquerdo */
+        radial-gradient(
+            ellipse 700px 500px at 0% 95%,
+            transparent 65%,
+            rgba(255,230,150,0.16) 65.5%,
+            transparent 66%
+        ),
+
+        /* arco inferior direito */
+        radial-gradient(
+            ellipse 600px 400px at 100% 85%,
+            transparent 62%,
+            rgba(255,255,255,0.13) 62.5%,
+            transparent 63%
+        );
+
+    filter: blur(1px);
+
+    animation: aeroPattern 20s ease-in-out infinite alternate;
+}
+
+@keyframes aeroPattern {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(-1%, 1%) scale(1.025);
+    }
+}
