@@ -12,5 +12,110 @@
     "resumo": "Projetos ambientais ajudam na proteção de nascentes e cursos d'água.",
     "link": "https://exemplo.com/noticia-2",
     "data": "2026-08-20"
+  },
+  {
+    "tag": "🌳 Reflorestamento",
+    "titulo": "Voluntários plantam mais de 5 mil mudas no Parque da Cidade",
+    "resumo": "Iniciativa comunitária mobilizou centenas de pessoas no fim de semana para reforçar a arborização urbana.",
+    "link": "https://exemplo.com/noticia-3",
+    "data": "2026-08-15"
+  },
+  {
+    "tag": "🦅 Fauna",
+    "titulo": "Aves migratórias voltam a frequentar a Lagoa do Paranoá",
+    "resumo": "Especialistas observam aumento na biodiversidade após ações de limpeza e manejo do espelho d'água.",
+    "link": "https://exemplo.com/noticia-4",
+    "data": "2026-08-10"
+  },
+  {
+    "tag": "☀️ Energia Limpa",
+    "titulo": "Escolas públicas do DF adotam energia solar",
+    "resumo": "Instalação de painéis fotovoltaicos promete reduzir custos operacionais e promover a sustentabilidade.",
+    "link": "https://exemplo.com/noticia-5",
+    "data": "2026-08-02"
+  },
+  {
+    "tag": "🌾 Agricultura",
+    "titulo": "Feira de produtos orgânicos reúne produtores locais",
+    "resumo": "Evento destaca o trabalho de pequenos agricultores que utilizam técnicas livres de pesticidas.",
+    "link": "https://exemplo.com/noticia-6",
+    "data": "2026-07-28"
+  },
+  {
+    "tag": "🔥 Prevenção",
+    "titulo": "Brigadistas realizam aceiros preventivos para combater incêndios",
+    "resumo": "Ações estratégicas antes do período mais seco buscam conter o avanço do fogo nas reservas ecológicas.",
+    "link": "https://exemplo.com/noticia-7",
+    "data": "2026-07-20"
+  },
+  {
+    "tag": "♻️ Reciclagem",
+    "titulo": "Pontos de coleta seletiva ganham ampliação no Plano Piloto",
+    "resumo": "Novos contêineres inteligentes facilitam o descarte correto de resíduos recicláveis pela população.",
+    "link": "https://exemplo.com/noticia-8",
+    "data": "2026-07-12"
+  },
+  {
+    "tag": "🚲 Mobilidade",
+    "titulo": "Expansão da rede de ciclovias conecta novas regiões administrativas",
+    "resumo": "Trechos inéditos incentivam o uso do transporte sustentável e diminuem a emissão de carbono.",
+    "link": "https://exemplo.com/noticia-9",
+    "data": "2026-07-05"
+  },
+  {
+    "tag": "🎓 Educação",
+    "titulo": "Oficinas ambientais capacitam jovens para a sustentabilidade",
+    "resumo": "Alunos da rede pública aprendem sobre compostagem, horta caseira e consumo consciente.",
+    "link": "https://exemplo.com/noticia-10",
+    "data": "2026-06-25"
+  },
+  {
+    "tag": "🐝 Biodiversidade",
+    "titulo": "Projeto incentiva a criação de abelhas sem ferrão na capital",
+    "resumo": "Meliponicultura urbana contribui para a polinização de plantas nativas e flores da região.",
+    "link": "https://exemplo.com/noticia-11",
+    "data": "2026-06-18"
+  },
+  {
+    "tag": "🏞️ Unidades de Conservação",
+    "titulo": "Trilhas do Jardim Botânico recebem sinalização acessível",
+    "resumo": "Novas placas interativas e piso tátil garantem experiência inclusiva aos visitantes.",
+    "link": "https://exemplo.com/noticia-12",
+    "data": "2026-06-10"
+  },
+  {
+    "tag": "📜 Legislação",
+    "titulo": "Aprovada nova lei de proteção aos mananciais do Centro-Oeste",
+    "resumo": "Texto estabelece regras mais rígidas para construções próximas a nascentes de abastecimento.",
+    "link": "https://exemplo.com/noticia-13",
+    "data": "2026-05-30"
+  },
+  {
+    "tag": "🔬 Ciência",
+    "titulo": "Pesquisadores desenvolvem bioplástico a partir de resíduos vegetais",
+    "resumo": "Estudo inovador transforma restos de culturas agrícolas em material biodegradável.",
+    "link": "https://exemplo.com/noticia-14",
+    "data": "2026-05-22"
+  },
+  {
+    "tag": "💧 Recursos Hídricos",
+    "titulo": "Monitoramento de rios ganha sensores em tempo real",
+    "resumo": "Tecnologia vai alertar órgãos competentes sobre alterações na qualidade da água e níveis de vazão.",
+    "link": "https://exemplo.com/noticia-15",
+    "data": "2026-05-14"
+  },
+  {
+    "tag": "🌿 Hortas Urbanas",
+    "titulo": "Terrenos baldios são transformados em hortas comunitárias",
+    "resumo": "Moradores organizam mutirões para cultivar hortaliças e fortalecer a segurança alimentar do bairro.",
+    "link": "https://exemplo.com/noticia-16",
+    "data": "2026-05-02"
+  },
+  {
+    "tag": "🌎 Clima",
+    "titulo": "Fórum de Sustentabilidade debate soluções ambientais no DF",
+    "resumo": "Especialistas e gestores públicos se reúnem para elaborar diretrizes de adaptação às mudanças climáticas.",
+    "link": "https://exemplo.com/noticia-17",
+    "data": "2026-04-20"
   }
 ]
