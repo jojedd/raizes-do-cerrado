@@ -738,8 +738,6 @@ async function carregarNoticias() {
         (noticia, indice) =>
           `<button
             class="news-tab${
-              indice === 0 ? " active" : ""
-            }${
               ehRecente(noticia.data)
                 ? " recent"
                 : ""
@@ -753,9 +751,7 @@ async function carregarNoticias() {
     conteudo.innerHTML =
       noticiasRecentes.map(
         (noticia, indice) =>
-          `<article class="news-item${
-            indice === 0 ? " active" : ""
-          }">
+          `<article class="news-item">
 
             <span class="news-tag">
               ${noticia.tag}
@@ -916,6 +912,37 @@ function openNews(index) {
 
   currentNews =
     index;
+
+
+  /* Ao escolher uma notícia, o painel abre sozinho */
+
+  const painel =
+    document.getElementById(
+      "newsPanel"
+    );
+
+  const botaoToggle =
+    document.querySelector(
+      ".news-toggle"
+    );
+
+  if (painel) {
+
+    painel.classList.remove(
+      "collapsed"
+    );
+  }
+
+  if (botaoToggle) {
+
+    botaoToggle.textContent =
+      "−";
+
+    botaoToggle.setAttribute(
+      "aria-label",
+      "Recolher notícias"
+    );
+  }
 }
 
 

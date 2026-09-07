@@ -1964,6 +1964,24 @@ main {
    TAGS
 ========================================================= */
 
+.carousel-vazio {
+  padding:
+    30px 10px;
+
+  color:
+    #557285;
+
+  font-size:
+    0.9rem;
+
+  font-style:
+    italic;
+
+  text-align:
+    center;
+}
+
+
 .tag {
   display:
     inline-block;
@@ -4288,6 +4306,12 @@ main {
 .news-panel.collapsed .news-tabs {
   border-top:
     0;
+}
+
+
+.news-panel.collapsed .news-archive {
+  display:
+    none;
 }
 
 
