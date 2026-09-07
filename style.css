@@ -4443,3 +4443,76 @@ main {
   }
 
 }
+
+/* =========================================================
+   AJUSTES EXCLUSIVOS PARA CELULAR (MOBILE)
+========================================================= */
+@media (max-width: 768px) {
+
+  /* 1. Faz o banner colar no topo da tela do celular sem background em cima */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  .bubbles, 
+  .glass-spirals {
+    top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* 2. Transforma o Pop-up em uma notificação discreta no rodapé */
+  .popup-doacao {
+    position: fixed !important;
+    bottom: 12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: auto !important;
+    width: 92% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    padding: 8px 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 12px !important;
+    z-index: 9999 !important;
+  }
+
+  /* Deixa o conteúdo do pop-up em formato de barra de notificação (linha única/compacta) */
+  .popup-conteudo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  /* Esconde a imagem do gif para economizar espaço de notificação */
+  .popup-imagem {
+    display: none !important;
+  }
+
+  /* Esconde o texto longo e deixa apenas a mensagem direta */
+  .popup-conteudo p {
+    display: none !important;
+  }
+
+  .popup-conteudo h3 {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Botão em formato de pílula compacta de notificação */
+  .popup-botao {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+}
