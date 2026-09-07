@@ -993,6 +993,20 @@ function toggleNews() {
       "Recolher notícias"
     );
 
+
+    /* Ao expandir, abre a notícia mais recente
+       se nenhuma estiver selecionada ainda */
+
+    const jaTemNoticiaAberta =
+      document.querySelector(
+        ".news-item.active"
+      );
+
+    if (!jaTemNoticiaAberta) {
+
+      openNews(0);
+    }
+
   }
 
 }
