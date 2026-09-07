@@ -4516,3 +4516,40 @@ main {
     white-space: nowrap !important;
   }
 }
+
+/* =========================================================
+   REMOÇÃO DEFINITIVA DO ESPAÇO SUPERIOR NO MOBILE
+========================================================= */
+@media (max-width: 768px) {
+
+  /* Zera qualquer recuo padrão da página e áreas seguras do navegador */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Cola o header no topo zero e anula margens de elementos filhos */
+  header {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    top: 0 !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Remove margens do trilho do banner que empurram o conteúdo para baixo */
+  .banner-track,
+  .banner,
+  .header-glass {
+    margin-top: 0 !important;
+  }
+
+  /* Move o contêiner das bolhas e espirais para trás do banner */
+  .bubbles,
+  .glass-spirals {
+    top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
