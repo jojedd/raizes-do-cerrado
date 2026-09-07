@@ -226,6 +226,106 @@ window.addEventListener(
 
 
 /* =========================================================
+   CONQUISTAS
+   Carregadas de um arquivo/backend (ver CONQUISTAS_URL).
+========================================================= */
+
+/*
+   Troque essa URL por um endpoint de backend real
+   assim que tiver um. Formato esperado, uma lista
+   de objetos:
+
+   {
+     "icone": "🌱",
+     "titulo": "Título da conquista",
+     "tag": "Ação Realizada",
+     "descricao": "Texto descrevendo a conquista."
+   }
+*/
+
+const CONQUISTAS_URL =
+  "conquistas.json";
+
+
+
+async function carregarConquistas() {
+
+  const track =
+    document.getElementById(
+      "achievementTrack"
+    );
+
+  if (!track) {
+    return;
+  }
+
+
+  let lista = [];
+
+  try {
+
+    const resposta =
+      await fetch(
+        CONQUISTAS_URL
+      );
+
+    lista =
+      await resposta.json();
+
+  } catch (erro) {
+
+    console.error(
+      "Não foi possível carregar as conquistas:",
+      erro
+    );
+  }
+
+
+  if (lista.length === 0) {
+
+    track.innerHTML =
+      `<div class="slide">
+        <p class="carousel-vazio">
+          Nenhuma conquista cadastrada ainda.
+        </p>
+      </div>`;
+
+  } else {
+
+    track.innerHTML =
+      lista.map(
+        conquista =>
+          `<div class="slide">
+
+            <div class="slide-icon">
+              ${conquista.icone}
+            </div>
+
+            <h3>
+              ${conquista.titulo}
+            </h3>
+
+            <span class="tag">
+              ${conquista.tag}
+            </span>
+
+            <p>
+              ${conquista.descricao}
+            </p>
+
+          </div>`
+      ).join("");
+  }
+
+
+  setupCarousel(
+    "achievement"
+  );
+}
+
+
+
+/* =========================================================
    PIX
 ========================================================= */
 
@@ -471,6 +571,8 @@ window.addEventListener(
 initCarousels();
 
 atualizarFundo();
+
+carregarConquistas();
 
 /* =========================================================
    NOTÍCIAS
