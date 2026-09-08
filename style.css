@@ -669,7 +669,7 @@ header {
       rgba(0,80,150,0.08),
       rgba(0,70,100,0.38)
     ),
-    url("brasilia.jpg");
+    url("banner/brasilia.jpg");
 }
 
 
@@ -681,7 +681,7 @@ header {
       rgba(0,100,140,0.05),
       rgba(120,80,0,0.35)
     ),
-    url("ipe.jpeg");
+    url("banner/ipe.jpeg");
 }
 
 
@@ -693,7 +693,7 @@ header {
       rgba(0,90,140,0.06),
       rgba(50,80,40,0.40)
     ),
-    url("catedral.jpg");
+    url("banner/catedral.jpg");
 }
 
 
@@ -4627,5 +4627,66 @@ main {
     top: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+  }
+}
+
+
+/* =========================================================
+   CORREÇÃO FINAL — MOBILE
+   Banner colado no topo, sem sobrepor o conteúdo
+========================================================= */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  body {
+    position: relative !important;
+  }
+
+  header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: 340px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 10 !important;
+  }
+
+  .banner-track,
+  .banner {
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+  }
+
+  .header-glass {
+    margin: 0 !important;
+  }
+
+  main,
+  #aba-noticias {
+    margin-top: 0 !important;
+  }
+
+  .glass-card:first-child {
+    margin-top: 0 !important;
+  }
+
+  .bubbles,
+  .glass-spirals {
+    position: fixed !important;
+    inset: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
   }
 }
