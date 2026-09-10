@@ -18,6 +18,45 @@
 
 
 <!-- =========================================================
+     SELETOR DE TEMAS
+========================================================= -->
+
+<div
+  class="theme-switcher"
+  role="group"
+  aria-label="Selecionar tema do site">
+
+  <button
+    type="button"
+    class="theme-swatch"
+    data-tema="ipe"
+    onclick="aplicarTema('ipe')"
+    aria-label="Tema Ipê"
+    title="Ipê">
+  </button>
+
+  <button
+    type="button"
+    class="theme-swatch"
+    data-tema="caliandra"
+    onclick="aplicarTema('caliandra')"
+    aria-label="Tema Caliandra"
+    title="Caliandra">
+  </button>
+
+  <button
+    type="button"
+    class="theme-swatch"
+    data-tema="azulzinha"
+    onclick="aplicarTema('azulzinha')"
+    aria-label="Tema Azulzinha"
+    title="Azulzinha">
+  </button>
+
+</div>
+
+
+<!-- =========================================================
      POP-UP
 ========================================================= -->
 
@@ -464,6 +503,27 @@
   </p>
 
 
+  <div class="especies-busca">
+
+    <input
+      type="text"
+      id="buscaEspecies"
+      class="especies-busca-input"
+      placeholder="🔍 Buscar por nome, nome científico ou tipo..."
+      oninput="filtrarEspecies(this.value)"
+      aria-label="Buscar espécies">
+
+  </div>
+
+
+  <p
+    class="especies-busca-vazio"
+    id="especiesBuscaVazio"
+    style="display: none;">
+    Nenhuma espécie encontrada para essa busca.
+  </p>
+
+
   <div class="carousel especies-carousel">
 
     <div class="carousel-viewport">
@@ -472,825 +532,9 @@
         class="track"
         id="especiesTrack">
 
-
-        <!-- 01 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/caliandra.jpg"
-              alt="Caliandra">
-
-          </div>
-
-          <h3>
-            Caliandra
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Calliandra_dysantha"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Calliandra dysantha
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Arbusto florido
-          </span>
-
-          <p>
-            Arbusto conhecido pelas flores delicadas,
-            geralmente vermelhas ou rosadas.
-          </p>
-
-        </div>
-
-
-
-        <!-- 02 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/pequi.jpg"
-              alt="Pequi">
-
-          </div>
-
-          <h3>
-            Pequi
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Caryocar_brasiliense"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Caryocar brasiliense
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore frutífera
-          </span>
-
-          <p>
-            Espécie típica do Cerrado que produz o
-            conhecido fruto pequi.
-          </p>
-
-        </div>
-
-
-
-        <!-- 03 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/azulzinho-do-cerrado.jpg"
-              alt="Azulzinho-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Azulzinho-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Commelina"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Commelina sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Flor nativa
-          </span>
-
-          <p>
-            Pequena planta conhecida por suas delicadas
-            flores azuladas.
-          </p>
-
-        </div>
-
-
-
-        <!-- 04 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/baru.jpg"
-              alt="Baru">
-
-          </div>
-
-          <h3>
-            Baru
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Dipteryx_alata"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Dipteryx alata
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore frutífera
-          </span>
-
-          <p>
-            Árvore nativa que produz sementes conhecidas
-            como castanhas de baru.
-          </p>
-
-        </div>
-
-
-
-        <!-- 05 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/canela-de-ema.jpg"
-              alt="Canela-de-Ema">
-
-          </div>
-
-          <h3>
-            Canela-de-Ema
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Vellozia_flavicans"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Vellozia flavicans
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Planta nativa
-          </span>
-
-          <p>
-            Planta característica de áreas abertas e
-            ambientes de Cerrado rupestre.
-          </p>
-
-        </div>
-
-
-
-        <!-- 06 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/cagaita.jpg"
-              alt="Cagaita">
-
-          </div>
-
-          <h3>
-            Cagaita
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Eugenia_dysenterica"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Eugenia dysenterica
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore frutífera
-          </span>
-
-          <p>
-            Espécie nativa do Cerrado que produz
-            pequenos frutos amarelos.
-          </p>
-
-        </div>
-
-
-
-        <!-- 07 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/chuveirinho.jpg"
-              alt="Chuveirinho">
-
-          </div>
-
-          <h3>
-            Chuveirinho
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Paepalanthus"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Paepalanthus sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Planta herbácea
-          </span>
-
-          <p>
-            Planta de pequeno porte encontrada em áreas
-            campestres do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 08 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/ipe-amarelo.jpg"
-              alt="Ipê-Amarelo">
-
-          </div>
-
-          <h3>
-            Ipê-Amarelo
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Handroanthus_ochraceus"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Handroanthus ochraceus
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore florida
-          </span>
-
-          <p>
-            Árvore característica do Cerrado, conhecida
-            por sua intensa floração amarela.
-          </p>
-
-        </div>
-
-
-
-        <!-- 09 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/arnica.jpg"
-              alt="Arnica-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Arnica-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Lychnophora_ericoides"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Lychnophora ericoides
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Planta herbácea
-          </span>
-
-          <p>
-            Planta de pequeno porte encontrada em áreas
-            naturais do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 10 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/buriti.jpg"
-              alt="Buriti">
-
-          </div>
-
-          <h3>
-            Buriti
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Mauritia_flexuosa"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Mauritia flexuosa
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Palmeira
-          </span>
-
-          <p>
-            Palmeira característica das veredas e de
-            ambientes associados à água.
-          </p>
-
-        </div>
-
-
-
-        <!-- 11 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/margaridinha.jpg"
-              alt="Margaridinha-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Margaridinha-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Asteraceae"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Asteraceae sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Flor
-          </span>
-
-          <p>
-            Pequena flor nativa encontrada em campos
-            e áreas abertas do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 12 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/copaiba.jpg"
-              alt="Copaíba">
-
-          </div>
-
-          <h3>
-            Copaíba
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Copaifera_langsdorffii"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Copaifera langsdorffii
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore
-          </span>
-
-          <p>
-            Árvore nativa encontrada em diferentes
-            formações vegetais do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 13 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/sempre-viva.jpg"
-              alt="Sempre-viva">
-
-          </div>
-
-          <h3>
-            Sempre-viva
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Comanthera"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Comanthera sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Flor
-          </span>
-
-          <p>
-            Pequena planta conhecida por suas flores
-            resistentes e características.
-          </p>
-
-        </div>
-
-
-
-        <!-- 14 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/jatoba.jpg"
-              alt="Jatobá-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Jatobá-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Hymenaea_stigonocarpa"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Hymenaea stigonocarpa
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore
-          </span>
-
-          <p>
-            Espécie nativa característica de áreas
-            de Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 15 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/mal-me-quer.jpg"
-              alt="Mal-me-quer-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Mal-me-quer-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Aspilia"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Aspilia sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Flor
-          </span>
-
-          <p>
-            Pequena planta de flores vistosas encontrada
-            em ambientes naturais do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 16 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/araticum.jpg"
-              alt="Araticum">
-
-          </div>
-
-          <h3>
-            Araticum
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Annona_crassiflora"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Annona crassiflora
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore frutífera
-          </span>
-
-          <p>
-            Espécie nativa que produz frutos grandes
-            e bastante característicos.
-          </p>
-
-        </div>
-
-
-
-        <!-- 17 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/aroeira.jpg"
-              alt="Aroeira">
-
-          </div>
-
-          <h3>
-            Aroeira
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Myracrodruon_urundeuva"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Myracrodruon urundeuva
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore
-          </span>
-
-          <p>
-            Espécie arbórea nativa presente em diferentes
-            ambientes do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 18 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/cajuzinho-do-cerrado.jpg"
-              alt="Cajuzinho-do-Cerrado">
-
-          </div>
-
-          <h3>
-            Cajuzinho-do-Cerrado
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/cardium_humile"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              cardium humile
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Planta frutífera
-          </span>
-
-          <p>
-            Planta nativa que produz pequenos frutos
-            semelhantes ao caju.
-          </p>
-
-        </div>
-
-
-
-        <!-- 19 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/sucupira.jpg"
-              alt="Sucupira">
-
-          </div>
-
-          <h3>
-            Sucupira
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Pterodon"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Pterodon sp.
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Árvore
-          </span>
-
-          <p>
-            Árvore nativa bastante associada à
-            vegetação do Cerrado.
-          </p>
-
-        </div>
-
-
-
-        <!-- 20 -->
-
-        <div class="slide">
-
-          <div class="slide-icon">
-
-            <img
-              src="especies/mangaba.jpg"
-              alt="Mangaba">
-
-          </div>
-
-          <h3>
-            Mangaba
-          </h3>
-
-          <a
-            class="scientific-name"
-            href="https://pt.wikipedia.org/wiki/Hancornia_speciosa"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            <em>
-              Hancornia speciosa
-            </em>
-
-          </a>
-
-          <span class="tag">
-            Planta frutífera
-          </span>
-
-          <p>
-            Planta nativa do Cerrado conhecida por
-            seus frutos aromáticos.
-          </p>
-
-        </div>
-
+        <p class="carousel-vazio">
+          Carregando espécies...
+        </p>
 
       </div>
 
@@ -1357,7 +601,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/majed.jpg"
+              src="majed.jpg"
               alt="Joao Majed">
 
           </div>
@@ -1385,13 +629,13 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/ana.jpg"
+              src="ana.jpg"
               alt="Ana Carollina">
 
           </div>
 
           <h3>
-            Ana Carollina
+            ..............
           </h3>
 
           <span class="tag">
@@ -1413,7 +657,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/celly.jpg"
+              src="celly.jpg"
               alt="Marcelly Hadassa">
 
           </div>
@@ -1441,7 +685,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/malu.jpg"
+              src="malu.jpg"
               alt="Maria Luiza">
 
           </div>
@@ -1469,7 +713,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/erick.jpg"
+              src="erick.jpg"
               alt="Erick">
 
           </div>
@@ -1497,7 +741,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/calebe.jpg"
+              src="calebe.jpg"
               alt="Calebe">
 
           </div>
@@ -1525,7 +769,7 @@
           <div class="slide-icon">
 
             <img
-              src="fotos/rosana.jpg"
+              src="rosana.jpg"
               alt="Rosana Vieira">
 
           </div>

@@ -1,0 +1,162 @@
+[
+  {
+    "nome": "Caliandra",
+    "nomeCientifico": "Calliandra dysantha",
+    "link": "https://pt.wikipedia.org/wiki/Calliandra_dysantha",
+    "tag": "Arbusto florido",
+    "descricao": "Arbusto conhecido pelas flores delicadas, geralmente vermelhas ou rosadas.",
+    "imagem": "especies/caliandra.jpg"
+  },
+  {
+    "nome": "Pequi",
+    "nomeCientifico": "Caryocar brasiliense",
+    "link": "https://pt.wikipedia.org/wiki/Caryocar_brasiliense",
+    "tag": "Árvore frutífera",
+    "descricao": "Espécie típica do Cerrado que produz o conhecido fruto pequi.",
+    "imagem": "especies/pequi.jpg"
+  },
+  {
+    "nome": "Azulzinho-do-Cerrado",
+    "nomeCientifico": "Commelina sp.",
+    "link": "https://pt.wikipedia.org/wiki/Commelina",
+    "tag": "Flor nativa",
+    "descricao": "Pequena planta conhecida por suas delicadas flores azuladas.",
+    "imagem": "especies/azulzinho-do-cerrado.jpg"
+  },
+  {
+    "nome": "Baru",
+    "nomeCientifico": "Dipteryx alata",
+    "link": "https://pt.wikipedia.org/wiki/Dipteryx_alata",
+    "tag": "Árvore frutífera",
+    "descricao": "Árvore nativa que produz sementes conhecidas como castanhas de baru.",
+    "imagem": "especies/baru.jpg"
+  },
+  {
+    "nome": "Canela-de-Ema",
+    "nomeCientifico": "Vellozia flavicans",
+    "link": "https://pt.wikipedia.org/wiki/Vellozia_flavicans",
+    "tag": "Planta nativa",
+    "descricao": "Planta característica de áreas abertas e ambientes de Cerrado rupestre.",
+    "imagem": "especies/canela-de-ema.jpg"
+  },
+  {
+    "nome": "Cagaita",
+    "nomeCientifico": "Eugenia dysenterica",
+    "link": "https://pt.wikipedia.org/wiki/Eugenia_dysenterica",
+    "tag": "Árvore frutífera",
+    "descricao": "Espécie nativa do Cerrado que produz pequenos frutos amarelos.",
+    "imagem": "especies/cagaita.jpg"
+  },
+  {
+    "nome": "Chuveirinho",
+    "nomeCientifico": "Paepalanthus sp.",
+    "link": "https://pt.wikipedia.org/wiki/Paepalanthus",
+    "tag": "Planta herbácea",
+    "descricao": "Planta de pequeno porte encontrada em áreas campestres do Cerrado.",
+    "imagem": "especies/chuveirinho.jpg"
+  },
+  {
+    "nome": "Ipê-Amarelo",
+    "nomeCientifico": "Handroanthus ochraceus",
+    "link": "https://pt.wikipedia.org/wiki/Handroanthus_ochraceus",
+    "tag": "Árvore florida",
+    "descricao": "Árvore característica do Cerrado, conhecida por sua intensa floração amarela.",
+    "imagem": "especies/ipe-amarelo.jpg"
+  },
+  {
+    "nome": "Arnica-do-Cerrado",
+    "nomeCientifico": "Lychnophora ericoides",
+    "link": "https://pt.wikipedia.org/wiki/Lychnophora_ericoides",
+    "tag": "Planta herbácea",
+    "descricao": "Planta de pequeno porte encontrada em áreas naturais do Cerrado.",
+    "imagem": "especies/arnica.jpg"
+  },
+  {
+    "nome": "Buriti",
+    "nomeCientifico": "Mauritia flexuosa",
+    "link": "https://pt.wikipedia.org/wiki/Mauritia_flexuosa",
+    "tag": "Palmeira",
+    "descricao": "Palmeira característica das veredas e de ambientes associados à água.",
+    "imagem": "especies/buriti.jpg"
+  },
+  {
+    "nome": "Margaridinha-do-Cerrado",
+    "nomeCientifico": "Asteraceae sp.",
+    "link": "https://pt.wikipedia.org/wiki/Asteraceae",
+    "tag": "Flor",
+    "descricao": "Pequena flor nativa encontrada em campos e áreas abertas do Cerrado.",
+    "imagem": "especies/margaridinha.jpg"
+  },
+  {
+    "nome": "Copaíba",
+    "nomeCientifico": "Copaifera langsdorffii",
+    "link": "https://pt.wikipedia.org/wiki/Copaifera_langsdorffii",
+    "tag": "Árvore",
+    "descricao": "Árvore nativa encontrada em diferentes formações vegetais do Cerrado.",
+    "imagem": "especies/copaiba.jpg"
+  },
+  {
+    "nome": "Sempre-viva",
+    "nomeCientifico": "Comanthera sp.",
+    "link": "https://pt.wikipedia.org/wiki/Comanthera",
+    "tag": "Flor",
+    "descricao": "Pequena planta conhecida por suas flores resistentes e características.",
+    "imagem": "especies/sempre-viva.jpg"
+  },
+  {
+    "nome": "Jatobá-do-Cerrado",
+    "nomeCientifico": "Hymenaea stigonocarpa",
+    "link": "https://pt.wikipedia.org/wiki/Hymenaea_stigonocarpa",
+    "tag": "Árvore",
+    "descricao": "Espécie nativa característica de áreas de Cerrado.",
+    "imagem": "especies/jatoba.jpg"
+  },
+  {
+    "nome": "Mal-me-quer-do-Cerrado",
+    "nomeCientifico": "Aspilia sp.",
+    "link": "https://pt.wikipedia.org/wiki/Aspilia",
+    "tag": "Flor",
+    "descricao": "Pequena planta de flores vistosas encontrada em ambientes naturais do Cerrado.",
+    "imagem": "especies/mal-me-quer.jpg"
+  },
+  {
+    "nome": "Araticum",
+    "nomeCientifico": "Annona crassiflora",
+    "link": "https://pt.wikipedia.org/wiki/Annona_crassiflora",
+    "tag": "Árvore frutífera",
+    "descricao": "Espécie nativa que produz frutos grandes e bastante característicos.",
+    "imagem": "especies/araticum.jpg"
+  },
+  {
+    "nome": "Aroeira",
+    "nomeCientifico": "Myracrodruon urundeuva",
+    "link": "https://pt.wikipedia.org/wiki/Myracrodruon_urundeuva",
+    "tag": "Árvore",
+    "descricao": "Espécie arbórea nativa presente em diferentes ambientes do Cerrado.",
+    "imagem": "especies/aroeira.jpg"
+  },
+  {
+    "nome": "Cajuzinho-do-Cerrado",
+    "nomeCientifico": "Anacardium humile",
+    "link": "https://pt.wikipedia.org/wiki/Anacardium_humile",
+    "tag": "Planta frutífera",
+    "descricao": "Planta nativa que produz pequenos frutos semelhantes ao caju.",
+    "imagem": "especies/cajuzinho-do-cerrado.jpg"
+  },
+  {
+    "nome": "Sucupira",
+    "nomeCientifico": "Pterodon sp.",
+    "link": "https://pt.wikipedia.org/wiki/Pterodon",
+    "tag": "Árvore",
+    "descricao": "Árvore nativa bastante associada à vegetação do Cerrado.",
+    "imagem": "especies/sucupira.jpg"
+  },
+  {
+    "nome": "Mangaba",
+    "nomeCientifico": "Hancornia speciosa",
+    "link": "https://pt.wikipedia.org/wiki/Hancornia_speciosa",
+    "tag": "Planta frutífera",
+    "descricao": "Planta nativa do Cerrado conhecida por seus frutos aromáticos.",
+    "imagem": "especies/mangaba.jpg"
+  }
+]

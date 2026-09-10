@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
 
   color:
-    #173b52;
+    var(--text-dark);
 
   background:
     linear-gradient(
@@ -59,7 +59,10 @@ body {
    CORES
 ========================================================= */
 
-:root {
+:root,
+:root[data-theme="ipe"] {
+
+  /* ---- fundo da página (também ajustado via JS ao rolar) ---- */
 
   --blue-top:
     rgb(48, 145, 235);
@@ -74,6 +77,8 @@ body {
     rgb(255, 224, 90);
 
 
+  /* ---- textos ---- */
+
   --text-dark:
     #173b52;
 
@@ -83,19 +88,371 @@ body {
   --text-yellow:
     #8b5a00;
 
+  --text-green:
+    #47712f;
 
-  --glass-white:
-    rgba(255,255,255,0.66);
+  --text-body:
+    #28495a;
 
-  --glass-blue:
-    rgba(220,244,255,0.28);
+  --text-muted:
+    #557285;
+
+  --text-link:
+    #2778a0;
+
+
+  /* ---- vidro dos painéis (header, cards, stats, pilares, carrossel) ---- */
+
+  --glass-bg-1:
+    rgba(255,255,255,0.74);
+
+  --glass-bg-2:
+    rgba(235,247,255,0.32);
 
   --glass-border:
-    rgba(255,255,255,0.88);
+    rgba(255,255,255,0.90);
 
-  --glass-shadow:
-    rgba(40,90,130,0.22);
+  --glass-shine:
+    rgba(255,255,255,0.96);
+
+  --glass-shadow-inner:
+    rgba(20,100,150,0.08);
+
+  --glass-shadow-outer:
+    rgba(20,80,130,0.25);
+
+  --glass-mirror-light:
+    rgba(255,255,255,0.95);
+
+  --glass-mirror-dark:
+    rgba(120,170,210,0.35);
+
+
+  /* ---- moldura das fotos do carrossel ---- */
+
+  --frame-bg-1:
+    rgba(240,250,255,0.96);
+
+  --frame-bg-2:
+    rgba(185,220,242,0.90);
+
+  --frame-border:
+    rgba(105,165,205,0.95);
+
+
+  /* ---- acentos (badge, borda do pilar, tag) ---- */
+
+  --accent-strong:
+    #ffc700;
+
+  --accent-grad-1:
+    #42caff;
+
+  --accent-grad-2:
+    #0875d0;
+
+  --tag-bg-1: rgba(255,248,205,0.88);
+  --tag-bg-2: rgba(255,224,100,0.45);
+
+  --tag-color:
+    #8b6500;
+
+  --tag-border:
+    rgba(220,160,30,0.35);
+
+
+  /* ---- tingimento das fotos do banner ---- */
+
+  --banner-tint-1a: rgba(0,80,150,0.08);
+  --banner-tint-1b: rgba(0,70,100,0.38);
+  --banner-tint-2a: rgba(0,100,140,0.05);
+  --banner-tint-2b: rgba(120,80,0,0.35);
+  --banner-tint-3a: rgba(0,90,140,0.06);
+  --banner-tint-3b: rgba(50,80,40,0.40);
+
+  color-scheme: light;
 }
+
+
+/* =========================================================
+   TEMA CALIANDRA (vermelho forte > rosa)
+========================================================= */
+
+:root[data-theme="caliandra"] {
+
+  --blue-top: rgb(150,15,42);
+  --blue-light: rgb(205,45,85);
+  --ipe-yellow: rgb(230,35,110);
+  --ipe-light: rgb(255,150,180);
+
+  --text-dark: #5c1030;
+  --text-blue: #7a0f3d;
+  --text-yellow: #9c1550;
+  --text-green: #8a1d45;
+
+  --text-body: #5c1030;
+  --text-muted: #8a4060;
+  --text-link: #a01050;
+
+  --glass-bg-1: rgba(255,240,244,0.76);
+  --glass-bg-2: rgba(255,205,220,0.34);
+  --glass-border: rgba(255,255,255,0.88);
+  --glass-shine: rgba(255,255,255,0.95);
+  --glass-shadow-inner: rgba(150,20,60,0.10);
+  --glass-shadow-outer: rgba(140,10,60,0.28);
+  --glass-mirror-light: rgba(255,255,255,0.92);
+  --glass-mirror-dark: rgba(180,50,100,0.32);
+
+  --frame-bg-1: rgba(255,240,245,0.96);
+  --frame-bg-2: rgba(240,190,210,0.90);
+  --frame-border: rgba(200,90,130,0.95);
+
+  --accent-strong: #ff2d78;
+  --accent-grad-1: #ff6fa8;
+  --accent-grad-2: #c9126b;
+  --tag-bg-1: rgba(255,235,240,0.88);
+  --tag-bg-2: rgba(255,170,195,0.45);
+  --tag-color: #7a0f3d;
+  --tag-border: rgba(210,40,100,0.35);
+
+  --banner-tint-1a: rgba(120,0,40,0.10);
+  --banner-tint-1b: rgba(150,10,60,0.44);
+  --banner-tint-2a: rgba(140,0,50,0.08);
+  --banner-tint-2b: rgba(180,20,80,0.42);
+  --banner-tint-3a: rgba(110,0,45,0.10);
+  --banner-tint-3b: rgba(160,10,70,0.46);
+
+  color-scheme: light;
+}
+
+
+/* =========================================================
+   TEMA AZULZINHA (vidros petróleo, roxo > azul, quase dark)
+========================================================= */
+
+:root[data-theme="azulzinha"] {
+
+  --blue-top: rgb(8,16,40);
+  --blue-light: rgb(20,45,90);
+  --ipe-yellow: rgb(30,80,150);
+  --ipe-light: rgb(60,110,190);
+
+  --text-dark: #dbe8fb;
+  --text-blue: #9fd0ff;
+  --text-yellow: #ffb84d;
+  --text-green: #8fe0c0;
+
+  --text-body: #cfe4ff;
+  --text-muted: #7fa0c0;
+  --text-link: #6ec1ff;
+
+  --glass-bg-1: rgba(20,35,65,0.62);
+  --glass-bg-2: rgba(15,45,80,0.36);
+  --glass-border: rgba(110,170,230,0.35);
+  --glass-shine: rgba(255,255,255,0.22);
+  --glass-shadow-inner: rgba(0,10,25,0.35);
+  --glass-shadow-outer: rgba(0,5,15,0.55);
+  --glass-mirror-light: rgba(150,200,255,0.35);
+  --glass-mirror-dark: rgba(0,5,10,0.50);
+
+  --frame-bg-1: rgba(60,95,150,0.55);
+  --frame-bg-2: rgba(15,30,60,0.75);
+  --frame-border: rgba(100,160,230,0.65);
+
+  --accent-strong: #3fa9ff;
+  --accent-grad-1: #5fc1ff;
+  --accent-grad-2: #1a5fb0;
+  --tag-bg-1: rgba(30,70,130,0.55);
+  --tag-bg-2: rgba(40,110,190,0.40);
+  --tag-color: #cfe8ff;
+  --tag-border: rgba(90,160,230,0.40);
+
+  --banner-tint-1a: rgba(5,10,25,0.40);
+  --banner-tint-1b: rgba(8,20,50,0.75);
+  --banner-tint-2a: rgba(5,12,28,0.40);
+  --banner-tint-2b: rgba(10,30,65,0.75);
+  --banner-tint-3a: rgba(4,10,22,0.40);
+  --banner-tint-3b: rgba(8,25,55,0.75);
+
+  color-scheme: dark;
+}
+
+
+/* =========================================================
+   SELETOR DE TEMAS
+========================================================= */
+
+.theme-switcher {
+  position:
+    fixed;
+
+  top:
+    16px;
+
+  right:
+    16px;
+
+  z-index:
+    99998;
+
+  display:
+    flex;
+
+  gap:
+    8px;
+
+  padding:
+    8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--glass-bg-1),
+      var(--glass-bg-2)
+    );
+
+  border:
+    2px solid
+    var(--glass-border);
+
+  border-radius:
+    999px;
+
+  backdrop-filter:
+    blur(18px)
+    saturate(150%);
+
+  -webkit-backdrop-filter:
+    blur(18px)
+    saturate(150%);
+
+  box-shadow:
+
+    inset
+    0 1px 0
+    var(--glass-shine),
+
+    0 8px 20px
+    rgba(0,0,0,0.18);
+}
+
+
+
+.theme-swatch {
+  width:
+    26px;
+
+  height:
+    26px;
+
+  padding:
+    0;
+
+  cursor:
+    pointer;
+
+  border-radius:
+    50%;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.85);
+
+  box-shadow:
+
+    inset
+    0 1px 2px
+    rgba(255,255,255,0.6),
+
+    0 2px 6px
+    rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+
+.theme-swatch:hover {
+  transform:
+    scale(1.12);
+}
+
+
+
+.theme-swatch.active {
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px rgba(0,0,0,0.25),
+
+    inset
+    0 1px 2px
+    rgba(255,255,255,0.6);
+}
+
+
+
+.theme-swatch[data-tema="ipe"] {
+  background:
+    linear-gradient(
+      135deg,
+      #48c8ff,
+      #ffd83c
+    );
+}
+
+
+
+.theme-swatch[data-tema="caliandra"] {
+  background:
+    linear-gradient(
+      135deg,
+      #ff2d78,
+      #7a0f2a
+    );
+}
+
+
+
+.theme-swatch[data-tema="azulzinha"] {
+  background:
+    linear-gradient(
+      135deg,
+      #3fa9ff,
+      #0a1428
+    );
+}
+
+
+
+@media (max-width: 600px) {
+
+  .theme-switcher {
+    top:
+      10px;
+
+    right:
+      10px;
+
+    gap:
+      6px;
+
+    padding:
+      6px;
+  }
+
+
+  .theme-swatch {
+    width:
+      22px;
+
+    height:
+      22px;
+  }
+
+}
+
 
 
 /* =========================================================
@@ -666,10 +1023,10 @@ header {
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,80,150,0.08),
-      rgba(0,70,100,0.38)
+      var(--banner-tint-1a),
+      var(--banner-tint-1b)
     ),
-    url("banner/brasilia.jpg");
+    url("brasilia.jpg");
 }
 
 
@@ -678,10 +1035,10 @@ header {
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,100,140,0.05),
-      rgba(120,80,0,0.35)
+      var(--banner-tint-2a),
+      var(--banner-tint-2b)
     ),
-    url("banner/ipe.jpeg");
+    url("ipe.jpeg");
 }
 
 
@@ -690,10 +1047,78 @@ header {
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,90,140,0.06),
-      rgba(50,80,40,0.40)
+      var(--banner-tint-3a),
+      var(--banner-tint-3b)
     ),
-    url("banner/catedral.jpg");
+    url("catedral.jpg");
+}
+
+
+
+/* Cada tema pode usar suas próprias fotos de banner.
+   Trocando os arquivos abaixo (mesmo nome), a imagem
+   muda para todo mundo, em todos os temas. */
+
+[data-theme="caliandra"] .banner-1 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-1a),
+      var(--banner-tint-1b)
+    ),
+    url("caliandra-1.jpg");
+}
+
+[data-theme="caliandra"] .banner-2 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-2a),
+      var(--banner-tint-2b)
+    ),
+    url("caliandra-2.jpg");
+}
+
+[data-theme="caliandra"] .banner-3 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-3a),
+      var(--banner-tint-3b)
+    ),
+    url("caliandra-3.jpg");
+}
+
+
+
+[data-theme="azulzinha"] .banner-1 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-1a),
+      var(--banner-tint-1b)
+    ),
+    url("azulzinha-1.jpg");
+}
+
+[data-theme="azulzinha"] .banner-2 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-2a),
+      var(--banner-tint-2b)
+    ),
+    url("azulzinha-2.jpg");
+}
+
+[data-theme="azulzinha"] .banner-3 {
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--banner-tint-3a),
+      var(--banner-tint-3b)
+    ),
+    url("azulzinha-3.jpg");
 }
 
 
@@ -759,13 +1184,13 @@ header {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.74),
-      rgba(235,247,255,0.32)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.90);
+    var(--glass-border);
 
   border-radius:
     16px;
@@ -782,14 +1207,14 @@ header {
 
     inset
     0 2px 0
-    rgba(255,255,255,0.96),
+    var(--glass-shine),
 
     inset
     0 -6px 18px
-    rgba(20,100,150,0.08),
+    var(--glass-shadow-inner),
 
     0 15px 40px
-    rgba(20,80,130,0.25);
+    var(--glass-shadow-outer);
 }
 
 
@@ -864,8 +1289,8 @@ header {
   background:
     linear-gradient(
       135deg,
-      #42caff,
-      #0875d0
+      var(--accent-grad-1),
+      var(--accent-grad-2)
     );
 
   border:
@@ -899,7 +1324,7 @@ header h1 {
     );
 
   color:
-    #075b88;
+    var(--text-blue);
 
   text-shadow:
     2px 2px 0 white,
@@ -916,7 +1341,7 @@ header p {
     relative;
 
   color:
-    #47712f;
+    var(--text-green);
 
   font-weight:
     700;
@@ -1036,13 +1461,13 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.74),
-      rgba(235,247,255,0.32)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.90);
+    var(--glass-border);
 
   border-radius:
     16px;
@@ -1059,22 +1484,22 @@ main {
 
     inset
     1px 1px 0
-    rgba(255,255,255,0.95),
+    var(--glass-mirror-light),
 
     inset
     -1px -1px 0
-    rgba(120,170,210,0.35),
+    var(--glass-mirror-dark),
 
     inset
     0 2px 0
-    rgba(255,255,255,0.96),
+    var(--glass-shine),
 
     inset
     0 -6px 18px
-    rgba(20,100,150,0.08),
+    var(--glass-shadow-inner),
 
     0 15px 40px
-    rgba(20,80,130,0.25);
+    var(--glass-shadow-outer);
 }
 
 
@@ -1119,7 +1544,7 @@ main {
 
 .glass-card h2 {
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     clamp(
@@ -1146,7 +1571,7 @@ main {
 
 .glass-card p {
   color:
-    #28495a;
+    var(--text-body);
 
   line-height:
     1.7;
@@ -1208,13 +1633,13 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.74),
-      rgba(235,247,255,0.32)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.90);
+    var(--glass-border);
 
   border-radius:
     14px;
@@ -1231,22 +1656,22 @@ main {
 
     inset
     1px 1px 0
-    rgba(255,255,255,0.95),
+    var(--glass-mirror-light),
 
     inset
     -1px -1px 0
-    rgba(120,170,210,0.35),
+    var(--glass-mirror-dark),
 
     inset
     0 2px 0
-    rgba(255,255,255,0.96),
+    var(--glass-shine),
 
     inset
     0 -6px 18px
-    rgba(20,100,150,0.08),
+    var(--glass-shadow-inner),
 
     0 15px 40px
-    rgba(20,80,130,0.25);
+    var(--glass-shadow-outer);
 }
 
 
@@ -1294,7 +1719,7 @@ main {
     block;
 
   color:
-    #d18b00;
+    var(--text-yellow);
 
   font-size:
     2rem;
@@ -1313,7 +1738,7 @@ main {
     5px;
 
   color:
-    #58733b;
+    var(--text-green);
 
   font-weight:
     700;
@@ -1363,17 +1788,17 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.74),
-      rgba(235,247,255,0.32)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.90);
+    var(--glass-border);
 
   border-left:
     5px solid
-    #ffc700;
+    var(--accent-strong);
 
   border-radius:
     12px;
@@ -1390,22 +1815,22 @@ main {
 
     inset
     1px 1px 0
-    rgba(255,255,255,0.95),
+    var(--glass-mirror-light),
 
     inset
     -1px -1px 0
-    rgba(120,170,210,0.35),
+    var(--glass-mirror-dark),
 
     inset
     0 2px 0
-    rgba(255,255,255,0.96),
+    var(--glass-shine),
 
     inset
     0 -6px 18px
-    rgba(20,100,150,0.08),
+    var(--glass-shadow-inner),
 
     0 15px 40px
-    rgba(20,80,130,0.25);
+    var(--glass-shadow-outer);
 }
 
 
@@ -1450,7 +1875,7 @@ main {
 
 .pillar h3 {
   color:
-    #996600;
+    var(--text-yellow);
 
   margin-bottom:
     7px;
@@ -1495,13 +1920,13 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.78),
-      rgba(225,244,255,0.30)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.92);
+    var(--glass-border);
 
   border-radius:
     16px;
@@ -1518,7 +1943,7 @@ main {
 
     inset
     0 2px 0
-    rgba(255,255,255,0.98),
+    var(--glass-shine),
 
     inset
     0 8px 18px
@@ -1526,10 +1951,10 @@ main {
 
     inset
     0 -8px 18px
-    rgba(20,100,150,0.08),
+    var(--glass-shadow-inner),
 
     0 15px 40px
-    rgba(20,80,130,0.25);
+    var(--glass-shadow-outer);
 
   overflow:
     hidden;
@@ -1707,13 +2132,13 @@ main {
   background:
     linear-gradient(
       145deg,
-      rgba(240,250,255,0.96),
-      rgba(185,220,242,0.90)
+      var(--frame-bg-1),
+      var(--frame-bg-2)
     );
 
   border:
     1px solid
-    rgba(105,165,205,0.95);
+    var(--frame-border);
 
   border-radius:
     4px;
@@ -1873,7 +2298,7 @@ main {
     100%;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     1.35rem;
@@ -1895,7 +2320,7 @@ main {
     700px;
 
   color:
-    #28495a;
+    var(--text-body);
 
   line-height:
     1.7;
@@ -1927,7 +2352,7 @@ main {
     8px;
 
   color:
-    #55788f;
+    var(--text-muted);
 
   font-size:
     0.88rem;
@@ -1952,7 +2377,7 @@ main {
 
 .scientific-name:hover {
   color:
-    #07547c;
+    var(--text-blue);
 
   text-decoration:
     underline;
@@ -1969,7 +2394,7 @@ main {
     30px 10px;
 
   color:
-    #557285;
+    var(--text-muted);
 
   font-size:
     0.9rem;
@@ -1998,16 +2423,16 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,248,205,0.88),
-      rgba(255,224,100,0.45)
+      var(--tag-bg-1),
+      var(--tag-bg-2)
     );
 
   color:
-    #936000;
+    var(--tag-color);
 
   border:
     1px solid
-    rgba(220,160,30,0.50);
+    var(--tag-border);
 
   border-radius:
     8px;
@@ -2059,7 +2484,7 @@ main {
     pointer;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     1.8rem;
@@ -2222,6 +2647,98 @@ main {
 
   min-width:
     0;
+}
+
+
+
+/* =========================================================
+   BUSCA DE ESPÉCIES
+========================================================= */
+
+.especies-busca {
+  margin:
+    4px 0 16px;
+}
+
+
+.especies-busca-input {
+  width:
+    100%;
+
+  padding:
+    11px 16px;
+
+  color:
+    var(--text-body);
+
+  font-size:
+    0.95rem;
+
+  font-family:
+    inherit;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--glass-bg-1),
+      var(--glass-bg-2)
+    );
+
+  border:
+    2px solid
+    var(--glass-border);
+
+  border-radius:
+    10px;
+
+  box-shadow:
+
+    inset
+    0 2px 4px
+    var(--glass-shadow-inner);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.especies-busca-input::placeholder {
+  color:
+    var(--text-muted);
+}
+
+
+.especies-busca-input:focus {
+  outline:
+    none;
+
+  border-color:
+    var(--accent-strong);
+
+  box-shadow:
+
+    inset
+    0 2px 4px
+    var(--glass-shadow-inner),
+
+    0 0 0 3px
+    var(--tag-bg-2);
+}
+
+
+.especies-busca-vazio {
+  color:
+    var(--text-muted);
+
+  font-style:
+    italic;
+
+  text-align:
+    center;
+
+  padding:
+    18px 0;
 }
 
 
@@ -2626,7 +3143,7 @@ main {
     block;
 
   color:
-    #6e5721;
+    var(--text-yellow);
 
   margin-bottom:
     8px;
@@ -2645,7 +3162,7 @@ main {
     8px 13px;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-weight:
     700;
@@ -3126,7 +3643,7 @@ main {
 
 .popup-doacao h3 {
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     1.15rem;
@@ -3139,7 +3656,7 @@ main {
 
 .popup-doacao p {
   color:
-    #28495a;
+    var(--text-body);
 
   font-size:
     0.88rem;
@@ -3631,13 +4148,13 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.72),
-      rgba(235,247,255,0.28)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.88);
+    var(--glass-border);
 
   border-radius:
     14px;
@@ -3654,14 +4171,14 @@ main {
 
     inset
     0 2px 0
-    rgba(255,255,255,0.94),
+    var(--glass-shine),
 
     inset
     0 -5px 15px
-    rgba(20,100,150,0.07),
+    var(--glass-shadow-inner),
 
     0 12px 35px
-    rgba(20,80,130,0.20);
+    var(--glass-shadow-outer);
 
   overflow:
     hidden;
@@ -3735,13 +4252,13 @@ main {
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,0.30),
-      rgba(255,255,255,0.08)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border-bottom:
     1px solid
-    rgba(255,255,255,0.45);
+    var(--glass-border);
 }
 
 
@@ -3759,7 +4276,7 @@ main {
     0;
 
   color:
-    #07547c;
+    var(--text-blue);
 }
 
 
@@ -3780,7 +4297,7 @@ main {
     4px 9px;
 
   color:
-    #8b6500;
+    var(--tag-color);
 
   font-size:
     0.74rem;
@@ -3827,7 +4344,7 @@ main {
     pointer;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     1.4rem;
@@ -3838,13 +4355,13 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.72),
-      rgba(220,242,255,0.34)
+      var(--glass-bg-1),
+      var(--glass-bg-2)
     );
 
   border:
     2px solid
-    rgba(255,255,255,0.82);
+    var(--glass-border);
 
   border-radius:
     8px;
@@ -3853,10 +4370,10 @@ main {
 
     inset
     0 2px 3px
-    rgba(255,255,255,0.85),
+    var(--glass-shine),
 
     0 4px 10px
-    rgba(30,90,130,0.15);
+    var(--glass-shadow-inner);
 }
 
 
@@ -3899,7 +4416,7 @@ main {
     pointer;
 
   color:
-    #557285;
+    var(--text-muted);
 
   font-size:
     0.78rem;
@@ -3920,11 +4437,11 @@ main {
     ellipsis;
 
   background:
-    rgba(255,255,255,0.30);
+    var(--glass-bg-2);
 
   border:
     1px solid
-    rgba(255,255,255,0.50);
+    var(--glass-border);
 
   border-bottom:
     none;
@@ -3940,22 +4457,22 @@ main {
 
 .news-tab:hover {
   background:
-    rgba(255,255,255,0.52);
+    var(--glass-bg-1);
 
   color:
-    #07547c;
+    var(--text-blue);
 }
 
 
 .news-tab.active {
   color:
-    #07547c;
+    var(--text-blue);
 
   background:
-    rgba(255,255,255,0.68);
+    var(--glass-bg-1);
 
   border-color:
-    rgba(255,255,255,0.82);
+    var(--glass-border);
 }
 
 
@@ -4041,7 +4558,7 @@ main {
     4px 9px;
 
   color:
-    #8b6500;
+    var(--tag-color);
 
   font-size:
     0.72rem;
@@ -4118,7 +4635,7 @@ main {
     8px;
 
   color:
-    #6d8494;
+    var(--text-muted);
 
   font-size:
     0.78rem;
@@ -4130,7 +4647,7 @@ main {
 
 .news-vazio {
   color:
-    #557285;
+    var(--text-muted);
 
   font-size:
     0.9rem;
@@ -4145,7 +4662,7 @@ main {
     6px;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     1.2rem;
@@ -4160,7 +4677,7 @@ main {
     8px;
 
   color:
-    #28495a;
+    var(--text-body);
 
   line-height:
     1.55;
@@ -4172,7 +4689,7 @@ main {
 
 .news-link {
   color:
-    #2778a0;
+    var(--text-link);
 
   font-size:
     0.84rem;
@@ -4210,7 +4727,7 @@ main {
     pointer;
 
   color:
-    #07547c;
+    var(--text-blue);
 
   font-size:
     0.82rem;
@@ -4219,11 +4736,11 @@ main {
     800;
 
   background:
-    rgba(255,255,255,0.40);
+    var(--glass-bg-2);
 
   border:
     1px solid
-    rgba(255,255,255,0.60);
+    var(--glass-border);
 
   border-radius:
     8px;
@@ -4235,7 +4752,7 @@ main {
 
 .news-archive-toggle:hover {
   background:
-    rgba(255,255,255,0.65);
+    var(--glass-bg-1);
 }
 
 
@@ -4300,7 +4817,7 @@ main {
 
 .news-archive-lista li a {
   color:
-    #2778a0;
+    var(--text-link);
 
   font-weight:
     700;
@@ -4321,7 +4838,7 @@ main {
     0;
 
   color:
-    #6d8494;
+    var(--text-muted);
 
   font-size:
     0.78rem;
@@ -4442,251 +4959,4 @@ main {
       0 17px 16px;
   }
 
-}
-
-/* =========================================================
-   AJUSTES EXCLUSIVOS PARA CELULAR (MOBILE)
-========================================================= */
-@media (max-width: 768px) {
-
-  /* 1. Faz o banner colar no topo da tela do celular sem background em cima */
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  header {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  .bubbles, 
-  .glass-spirals {
-    top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  /* 2. Transforma o Pop-up em uma notificação discreta no rodapé */
-  .popup-doacao {
-    position: fixed !important;
-    bottom: 12px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: auto !important;
-    width: 92% !important;
-    max-width: 380px !important;
-    height: auto !important;
-    padding: 8px 12px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-    border-radius: 12px !important;
-    z-index: 9999 !important;
-  }
-
-  /* Deixa o conteúdo do pop-up em formato de barra de notificação (linha única/compacta) */
-  .popup-conteudo {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 8px !important;
-  }
-
-  /* Esconde a imagem do gif para economizar espaço de notificação */
-  .popup-imagem {
-    display: none !important;
-  }
-
-  /* Esconde o texto longo e deixa apenas a mensagem direta */
-  .popup-conteudo p {
-    display: none !important;
-  }
-
-  .popup-conteudo h3 {
-    font-size: 0.85rem !important;
-    margin: 0 !important;
-    white-space: nowrap !important;
-  }
-
-  /* Botão em formato de pílula compacta de notificação */
-  .popup-botao {
-    font-size: 0.75rem !important;
-    padding: 6px 10px !important;
-    margin: 0 !important;
-    white-space: nowrap !important;
-  }
-}
-
-/* =========================================================
-   REMOÇÃO DEFINITIVA DO ESPAÇO SUPERIOR NO MOBILE
-========================================================= */
-@media (max-width: 768px) {
-
-  /* Zera qualquer recuo padrão da página e áreas seguras do navegador */
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-  }
-
-  /* Cola o header no topo zero e anula margens de elementos filhos */
-  header {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    top: 0 !important;
-    position: relative;
-    z-index: 10;
-  }
-
-  /* Remove margens do trilho do banner que empurram o conteúdo para baixo */
-  .banner-track,
-  .banner,
-  .header-glass {
-    margin-top: 0 !important;
-  }
-
-  /* Move o contêiner das bolhas e espirais para trás do banner */
-  .bubbles,
-  .glass-spirals {
-    top: 0 !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-}
-
-/* =========================================================
-   IMPEDE O BANNER DE CAIR/MOVER NO MOBILE
-========================================================= */
-@media (max-width: 768px) {
-
-  /* Trava o topo do HTML/Body */
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative;
-  }
-
-  /* Fixa a posição do header diretamente no topo absoluto */
-  header {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding-top: 0 !important;
-    z-index: 100 !important; /* Mantém o banner acima de qualquer outro elemento */
-  }
-
-  /* Evita que o carrossel adicione margens invisíveis ao carregar */
-  .banner-track,
-  .banner {
-    margin-top: 0 !important;
-    top: 0 !important;
-  }
-
-  /* Empurra o conteúdo abaixo do header para não ficar escondido sob o banner travado */
-  main, 
-  #aba-noticias,
-  .glass-card:first-of-type {
-    margin-top: 140px !important; /* Ajuste este valor se o texto principal ficar coberto */
-  }
-}
-
-/* =========================================================
-   FORÇA O BANNER NO TOPO ABSOLUTO (MOBILE)
-========================================================= */
-@media (max-width: 768px) {
-
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    /* Anula o recuo automático do notch de celulares */
-    padding-top: env(safe-area-inset-top, 0px) !important; 
-  }
-
-  /* Puxa o header para o limite superior da tela */
-  header {
-    margin-top: -20px !important; /* Compensa o espaço invisível do topo */
-    padding-top: 0 !important;
-    position: relative;
-    z-index: 99;
-  }
-
-  /* Remove margens do primeiro elemento dentro do header */
-  header .banner-track,
-  header .header-glass,
-  header .badge {
-    margin-top: 0 !important;
-    padding-top: 10px !important; /* Ajuste fino do texto interno */
-  }
-
-  /* Garante que bolhas e espirais fiquem presas ao fundo sem empurrar o layout */
-  .bubbles,
-  .glass-spirals {
-    position: absolute !important;
-    top: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-
-/* =========================================================
-   CORREÇÃO FINAL — MOBILE
-   Banner colado no topo, sem sobrepor o conteúdo
-========================================================= */
-@media (max-width: 768px) {
-
-  html,
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  body {
-    position: relative !important;
-  }
-
-  header {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    height: 340px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    z-index: 10 !important;
-  }
-
-  .banner-track,
-  .banner {
-    margin: 0 !important;
-    padding: 0 !important;
-    top: 0 !important;
-  }
-
-  .header-glass {
-    margin: 0 !important;
-  }
-
-  main,
-  #aba-noticias {
-    margin-top: 0 !important;
-  }
-
-  .glass-card:first-child {
-    margin-top: 0 !important;
-  }
-
-  .bubbles,
-  .glass-spirals {
-    position: fixed !important;
-    inset: 0 !important;
-    top: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-  }
 }
